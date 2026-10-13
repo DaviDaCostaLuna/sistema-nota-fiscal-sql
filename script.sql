@@ -7,22 +7,22 @@ CREATE TABLE empresas (
     id_empresa INT AUTO_INCREMENT PRIMARY KEY,
     razao_social VARCHAR(100) NOT NULL,
     nome_fantasia VARCHAR(100),
-    cnpj CHAR(14) NOT NULL UNIQUE,
+    cnpj VARCHAR(14) NOT NULL UNIQUE,
     telefone VARCHAR(20),
     email VARCHAR(100),
     cidade VARCHAR(100),
-    cep CHAR(8),
+    cep VARCHAR(8),
     endereco VARCHAR(100)
 );
 
 CREATE TABLE clientes (
     id_cliente INT AUTO_INCREMENT PRIMARY KEY,
     nome_razao_social VARCHAR(100) NOT NULL,
-    cpf CHAR(11) NOT NULL UNIQUE,
+    cpf VARCHAR(11) NOT NULL UNIQUE,
     telefone VARCHAR(20),
     email VARCHAR(100),
     cidade VARCHAR(100),
-    cep CHAR(8),
+    cep VARCHAR(8),
     endereco VARCHAR(100)
 );
 
@@ -89,7 +89,7 @@ CREATE TABLE pagamentos_nota (
 CREATE TABLE transportadoras (
     id_transportadora INT AUTO_INCREMENT PRIMARY KEY,
     razao_social VARCHAR(100) NOT NULL,
-    cnpj CHAR(14),
+    cnpj VARCHAR(14),
     telefone VARCHAR(20),
     cidade VARCHAR(100),
     endereco VARCHAR(100)
